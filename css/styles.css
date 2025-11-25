@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jersey+10&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Young+Serif&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.redStrokeRectangle {
+    background: linear-gradient(black #680801);
+    border-style: solid;
+    border-color: #EB1A1A;
+
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    height: 150px;
+    width: 100%;
+
+    filter: drop-shadow(10px 10px 10px #EB1A1A);
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 20px;
+}
+
+.circleLogo {
+    background-color: #EB1A1A;
+    width: 30px;
+    height: 15px;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+}
+
+#circleLogo1 {
+    transform: translate(0px, 35px) rotateZ(-45deg);
+}
+
+#circleLogo2 {
+    transform: translate(-30px, 50px) rotateZ(135deg);
+}
+
+#navBar {
+    margin-top: 85px;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    bottom: 25px;
+}
+
+.redRectangle {
+    color: white;
+    font-family: "Jersey 10";
+    font-size: 20px;
+
+    background-color: #EB1A1A;
+    border-radius: 20px;
+
+    padding-bottom: 16px;
+    padding-top: 16px;
+    width: 140px;
+    height: fit-content;
+
+    float: left;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+#searchInput {
+    background-color: #EB1A1A;
+    height: 30px;
+    font-size: 20px;
+    border: 0;
+    width: 70%;
+    height: fit-content;
+    margin-left: 10px;
+}
+
+#searchBar {
+    height: 50px;
+    margin-right: 50px;
+}
+
+input::placeholder {
+    color: white;
+    font-family: "Jersey 10";
+    font-size: 30px;
+    padding-left: 10px;
+}
+
+#contactMe {
+    scroll-behavior: smooth;
+}
+
+#customersFeedback {
+    width: 205px;
+}
+
+
+#cart {
+    float: right;
+    position: relative;
+    bottom: 140px;
+    right: 25px;
+}
+
+.boxSection {
+    display: flex;
+    flex-direction: row;
+}
+
+.section {
+    width: 530px;
+    height: 530px;
+    border: 1px solid #EB1A1A;
+    background: linear-gradient(45deg black #666666);
+    margin: 100px;
+    border-radius: 20px;
+}
+
+#photoCV {
+    width: 124px;
+    height: 124px;
+    border-radius: 200px;
+    margin: 20px;
+}
+
+.sectionText {
+    color: #E6DAC6;
+    font-family: "Jersey 10";
+    font-size: 35px;
+}
+
+#introduce {
+    position: absolute;
+    top: 275px;
+    left: 275px;
+}
+
+#price {
+    width: 100%;
+    margin: 35% 10%;
+}
+
+#feedBackSection {
+    float: right;
+}
+
+#feedBack1 {
+    margin-left: 25%;
+    margin-top: 30px;
+}
+
+#feedBack2 {
+    margin-left: 25%;
+    margin-top: 30px;
+}
+
+#footer {
+    height: 150px;
+    border: 1px solid #EB1A1A;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+#mail {
+    width: 352px;
+}
+
+#tel {
+    width: 204px;
+}
+
+#legalsMention {
+    width: 190px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
