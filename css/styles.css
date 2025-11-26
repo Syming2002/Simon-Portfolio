@@ -122,6 +122,8 @@ body {
 .boxSection {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    margin: 50px 0;
 }
 
 .section {
@@ -129,7 +131,6 @@ body {
     height: 530px;
     border: 1px solid #EB1A1A;
     background: linear-gradient(45deg black #666666);
-    margin: 100px;
     border-radius: 20px;
 }
 
@@ -191,7 +192,11 @@ body {
     margin-top: 30px;
 }
 
-#footer {
+footer {
+    width: 100%;
+}
+
+.footer {
     height: 150px;
     border: 1px solid #EB1A1A;
     display: flex;
@@ -222,32 +227,36 @@ a {
 
 @media (max-width: 768px) {
 
-    #menuBurgerToggle:checked ~ .groupBar > .menuBurger span:nth-child(1) {
+    body {
+        width: 100%;
+    }
+
+    #menuBurgerToggle:checked ~ .groupBar > .boxMenuBurger > .menuBurger span:nth-child(1) {
         transition: transform 0.2s ease-out 0s;
         transform: rotate(45deg) translate(5px, 5px)
     }
 
-    #menuBurgerToggle:checked ~ .groupBar > .menuBurger span:nth-child(2) {
+    #menuBurgerToggle:checked ~ .groupBar > .boxMenuBurger > .menuBurger span:nth-child(2) {
         transition: opacity 0.2s ease-out 0s;
         opacity: 0;
     }
 
-    #menuBurgerToggle:checked ~ .groupBar > .menuBurger span:nth-child(3) {
+    #menuBurgerToggle:checked ~ .groupBar > .boxMenuBurger > .menuBurger span:nth-child(3) {
         transition: transform 0.2s ease-out 0s;
         transform: rotate(-45deg) translate(5px, -5px)
     }
 
-    #menuBurgerToggle:not(checked) ~ .groupBar > .menuBurger span:nth-child(1) {
+    #menuBurgerToggle:not(checked) ~ .groupBar > .boxMenuBurger > .menuBurger span:nth-child(1) {
         transition: transform 0.2s ease-out 0s;
         transform: rotate(0deg) translate(0px, 0px)
     }
 
-    #menuBurgerToggle:not(checked) ~ .groupBar > .menuBurger span:nth-child(2) {
+    #menuBurgerToggle:not(checked) ~ .groupBar > .boxMenuBurger > .menuBurger span:nth-child(2) {
         transition: opacity 0.2s ease-out 0s;
         opacity: 1;
     }
 
-    #menuBurgerToggle:not(checked) ~ .groupBar > .menuBurger span:nth-child(3) {
+    #menuBurgerToggle:not(checked) ~ .groupBar > .boxMenuBurger > .menuBurger span:nth-child(3) {
         transition: transform 0.2s ease-out 0s;
         transform: rotate(0deg) translate(0px, 0px)
     }
@@ -264,6 +273,7 @@ a {
         width: 20%;
 
         position: fixed;
+        display: none;
     }
 
     #navBar {
@@ -274,25 +284,30 @@ a {
         position: relative;
         bottom: 25px;
         align-items: center;
+        display: none;
     }
 
+    /* #navBar .active {
+        display: block;
+    } */
+
     .redRectangle {
-    color: white;
-    font-family: "Jersey 10";
-    font-size: 20px;
+        color: white;
+        font-family: "Jersey 10";
+        font-size: 20px;
 
-    background-color: #EB1A1A;
-    border-radius: 20px;
+        background-color: #EB1A1A;
+        border-radius: 20px;
 
-    padding-bottom: 16px;
-    padding-top: 16px;
-    width: 120px;
-    height: fit-content;
+        padding-bottom: 16px;
+        padding-top: 16px;
+        width: 120px;
+        height: fit-content;
 
-    float: left;
+        float: left;
 
-    display: flex;
-    justify-content: space-around;
+        display: flex;
+        justify-content: space-around;
     }
 
     
@@ -323,20 +338,30 @@ a {
         text-align: center;
     }
 
+    .boxMenuBurger {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 10%;
+    }
+
     .menuBurger {
         height: 100%;
         display: flex;
+        position: absolute;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 5px;
-        float: right;
         width: 40px;
         height: 40px;
         margin-top: 25px;
         background-color: #EB1A1A;
         border-radius: 5px;
     }
+
+    /* .menuBurger .open {
+        display: block;
+    } */
 
     .bar {
         background-color: white;
@@ -347,14 +372,23 @@ a {
     .boxSection {
         display: flex;
         flex-direction: column;
-        margin-left: 15%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section {                
+        margin: 25px 0;
     }
 
     #introduce {
         margin-top: -150px;
     }
 
-    #footer {
+    footer {
+        width: 100vw;
+    }
+
+    .footer {
         height: 300px;
         border: 1px solid #EB1A1A;
         display: flex;
@@ -398,14 +432,18 @@ a {
     .boxSection {
         display: flex;
         flex-direction: column;
-        margin-left: 15%;
+        /* margin-left: 15%; */
     }
 
     #introduce {
         margin-top: -150px;
     }
 
-    #footer {
+    footer {
+
+    }
+
+    .footer {
         height: 300px;
         border: 1px solid #EB1A1A;
         display: flex;
