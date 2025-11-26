@@ -10,6 +10,10 @@ body {
     background-color: black;
 }
 
+#menuBurgerToggle {
+    display: none;
+}
+
 .redStrokeRectangle {
     background: linear-gradient(black #680801);
     border-style: solid;
@@ -20,8 +24,6 @@ body {
 
     height: 150px;
     width: 100%;
-
-    filter: drop-shadow(10px 10px 10px #EB1A1A);
 }
 
 .logo {
@@ -74,22 +76,35 @@ body {
     justify-content: space-around;
 }
 
+#searchSymbol {
+    color: white;
+    margin-left: 20px;
+    margin-top: -5px;
+    width: 20%;
+    height: 150%;
+    background-color: white;
+    -webkit-mask: url(/media/search.svg) no-repeat center;
+            mask: url(/media/search.svg) no-repeat center;
+    mask-size: contain;
+}
+
+#searchBar {
+    height: 50px;
+    width: 200px;
+}
+
 #searchInput {
-    background-color: #EB1A1A;
+    background-color: #eb1a1a00;
+    color: white;
+    font-family: "Jersey 10";
     height: 30px;
     font-size: 20px;
     border: 0;
     width: 70%;
     height: fit-content;
-    margin-left: 10px;
 }
 
-#searchBar {
-    height: 50px;
-    margin-right: 50px;
-}
-
-input::placeholder {
+#searchInput::placeholder {
     color: white;
     font-family: "Jersey 10";
     font-size: 30px;
@@ -102,14 +117,6 @@ input::placeholder {
 
 #customersFeedback {
     width: 205px;
-}
-
-
-#cart {
-    float: right;
-    position: relative;
-    bottom: 140px;
-    right: 25px;
 }
 
 .boxSection {
@@ -126,41 +133,61 @@ input::placeholder {
     border-radius: 20px;
 }
 
+
 #photoCV {
     width: 124px;
     height: 124px;
-    border-radius: 200px;
+    border-radius: 50%;
     margin: 20px;
+    background: url("/media/photo_bord_de_mer_cv.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    zoom: 100%;
+}
+
+#introduce {
+    margin-left: 25%;
+    margin-top: -25%;
+    margin-bottom: -25%;
+}
+
+#price {
+    width: 100%;
+    margin: 35% 0;
+}
+
+
+
+#feedBackSection {
+    float: right;
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .sectionText {
     color: #E6DAC6;
     font-family: "Jersey 10";
     font-size: 35px;
+    text-align: center;
 }
 
-#introduce {
-    position: absolute;
-    top: 275px;
-    left: 275px;
-}
-
-#price {
-    width: 100%;
-    margin: 35% 10%;
-}
-
-#feedBackSection {
-    float: right;
+.accountCircle {
+    width: 20%;
+    background-color: #E6DAC6;
+    -webkit-mask: url(/media/account_circle.svg) no-repeat center;
+            mask: url(/media/account_circle.svg) no-repeat center;
+    mask-size: contain;
 }
 
 #feedBack1 {
-    margin-left: 25%;
     margin-top: 30px;
 }
 
 #feedBack2 {
-    margin-left: 25%;
     margin-top: 30px;
 }
 
@@ -189,4 +216,202 @@ input::placeholder {
 a {
     text-decoration: none;
     color: white;
+}
+
+/* Tablet Responsive */
+
+@media (max-width: 768px) {
+
+    #menuBurgerToggle:checked ~ .groupBar > .menuBurger span:nth-child(1) {
+        transition: transform 0.2s ease-out 0s;
+        transform: rotate(45deg) translate(5px, 5px)
+    }
+
+    #menuBurgerToggle:checked ~ .groupBar > .menuBurger span:nth-child(2) {
+        transition: opacity 0.2s ease-out 0s;
+        opacity: 0;
+    }
+
+    #menuBurgerToggle:checked ~ .groupBar > .menuBurger span:nth-child(3) {
+        transition: transform 0.2s ease-out 0s;
+        transform: rotate(-45deg) translate(5px, -5px)
+    }
+
+    #menuBurgerToggle:not(checked) ~ .groupBar > .menuBurger span:nth-child(1) {
+        transition: transform 0.2s ease-out 0s;
+        transform: rotate(0deg) translate(0px, 0px)
+    }
+
+    #menuBurgerToggle:not(checked) ~ .groupBar > .menuBurger span:nth-child(2) {
+        transition: opacity 0.2s ease-out 0s;
+        opacity: 1;
+    }
+
+    #menuBurgerToggle:not(checked) ~ .groupBar > .menuBurger span:nth-child(3) {
+        transition: transform 0.2s ease-out 0s;
+        transform: rotate(0deg) translate(0px, 0px)
+    }
+
+    .redStrokeRectangle {
+        background: linear-gradient(black #680801);
+        border-style: solid;
+        border-color: #EB1A1A;
+
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+
+        height: 100%;
+        width: 20%;
+
+        position: fixed;
+    }
+
+    #navBar {
+        margin-top: 85px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        position: relative;
+        bottom: 25px;
+        align-items: center;
+    }
+
+    .redRectangle {
+    color: white;
+    font-family: "Jersey 10";
+    font-size: 20px;
+
+    background-color: #EB1A1A;
+    border-radius: 20px;
+
+    padding-bottom: 16px;
+    padding-top: 16px;
+    width: 120px;
+    height: fit-content;
+
+    float: left;
+
+    display: flex;
+    justify-content: space-around;
+    }
+
+    
+
+    #searchBar {
+        height: 50px;
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #searchSymbol {
+        display: none;
+    }
+
+    #searchInput {
+        background-color: #eb1a1a00;
+        height: 30px;
+        font-size: 20px;
+        border: 0;
+        width: 100%;
+        height: fit-content;
+        align-items: center;
+    }
+
+    #customersFeedback {
+        width: 100px;
+        text-align: center;
+    }
+
+    .menuBurger {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        float: right;
+        width: 40px;
+        height: 40px;
+        margin-top: 25px;
+        background-color: #EB1A1A;
+        border-radius: 5px;
+    }
+
+    .bar {
+        background-color: white;
+        width: 25px;
+        height: 2px;
+    }
+
+    .boxSection {
+        display: flex;
+        flex-direction: column;
+        margin-left: 15%;
+    }
+
+    #introduce {
+        margin-top: -150px;
+    }
+
+    #footer {
+        height: 300px;
+        border: 1px solid #EB1A1A;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+    }
+}
+
+
+/* Mobile Responsive */
+
+@media (max-width: 375px) {
+
+    .redStrokeRectangle {
+        background: linear-gradient(black #680801);
+        border-style: solid;
+        border-color: #EB1A1A;
+
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+
+        height: 100%;
+        width: 20%;
+
+        filter: drop-shadow(10px 10px 10px #EB1A1A);
+
+        position: fixed;
+    }
+
+    #navBar {
+        margin-top: 85px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        position: relative;
+        bottom: 25px;
+    }
+
+    .boxSection {
+        display: flex;
+        flex-direction: column;
+        margin-left: 15%;
+    }
+
+    #introduce {
+        margin-top: -150px;
+    }
+
+    #footer {
+        height: 300px;
+        border: 1px solid #EB1A1A;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+    }
 }

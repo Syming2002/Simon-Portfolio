@@ -10,6 +10,7 @@
 
     <header>
         <nav>
+            <input type="checkbox" name="menuBurgerToggle" id="menuBurgerToggle">
             <div class="redStrokeRectangle">
                 <div class="logo">
                     <div class="circleLogo" id="circleLogo1">
@@ -21,6 +22,7 @@
                 </div>
                 <div id="navBar">
                     <div class="redRectangle" id="searchBar">
+                        <div id="searchSymbol"></div>                        
                         <input id="searchInput" class="white_text" type="text" placeholder="Search..."></p>
                     </div>
                     <div class="redRectangle">
@@ -35,16 +37,23 @@
                     <div class="redRectangle" id="customersFeedback">
                         <a href="#feedBackSection">Customers Feedback</a>
                     </div>
-                </div>
-                <div id="cart" class="redRectangle">
-                    View Cart
+                    <div class="redRectangle" id="cart">
+                        View Cart
+                    </div>
                 </div>
             </div>
+            <label for="menuBurgerToggle" class="groupBar">
+                <div class="menuBurger">
+                    <span class="bar bar1"></span>
+                    <span class="bar bar2"></span>
+                    <span class="bar bar3"></span>
+                </div>
+            </label>
         </nav>
     </header>
     <section class="boxSection">
         <section class="section">
-                <img src="./media/Photo CV.jpg" alt="Photo Simon" id="photoCV">
+                <img src="./media/photo_bord_de_mer.jpg" alt="Photo Simon" id="photoCV">
                 <p class="sectionText" id="introduce">I’m a Junior Web <br> Developer Programmer <br>
                 graduated from Institut <br>
                 Marie-Thérèse Solacroup <br>
@@ -57,9 +66,15 @@
                     Online Platform = 5000 €</p>
         </section>
         <section class="section" id="feedBackSection">
-                <p class="sectionText" id="feedBack1">Simon was very helpful <br> for making my website, <br> the communication was <br> great. I recommend <br> this web developer
-                <p class="sectionText" id="feedBack2">Simon was very fast <br>
-                for making my website <br> in emergency, the <br> operation was within <br> my budget. Great web <br> developer.</p>
+                <div class="row">
+                    <div class="accountCircle"></div>
+                    <p class="sectionText" id="feedBack1">Simon was very helpful <br> for making my website, <br> the communication was <br> great. I recommend <br> this web developer</p>
+                </div>                
+                <div class="row">
+                    <div class="accountCircle"></div>               
+                    <p class="sectionText" id="feedBack2">Simon was very fast <br>
+                    for making my website <br> in emergency, the <br> operation was within <br> my budget. Great web <br> developer.</p>
+                </div>
         </section>
     </section>
     <footer id="footer">
