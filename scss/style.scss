@@ -1,3 +1,8 @@
+@use "content.scss" as *;
+@use "header.scss" as *;
+@use "mixins.scss" as *;
+@use "variables.scss" as *;
+
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jersey+10&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Young+Serif&display=swap');
 
 * {
@@ -15,15 +20,15 @@ body {
 }
 
 .redStrokeRectangle {
-    background: linear-gradient(black #680801);
-    border-style: solid;
-    border-color: #EB1A1A;
+    @include redStrokeRectangleBlackBackground;
 
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
 
     height: 150px;
     width: 100%;
+
+    z-index: 999;
 }
 
 .logo {
@@ -34,7 +39,7 @@ body {
 }
 
 .circleLogo {
-    background-color: #EB1A1A;
+    background-color: $mainRedColor;
     width: 30px;
     height: 15px;
     border-top-left-radius: 200px;
@@ -58,11 +63,9 @@ body {
 }
 
 .redRectangle {
-    color: white;
-    font-family: "Jersey 10";
+    @include redRectangleWhiteTextJerseyFont;
     font-size: 20px;
 
-    background-color: #EB1A1A;
     border-radius: 20px;
 
     padding-bottom: 16px;
@@ -111,10 +114,6 @@ body {
     padding-left: 10px;
 }
 
-#contactMe {
-    scroll-behavior: smooth;
-}
-
 #customersFeedback {
     width: 205px;
 }
@@ -130,8 +129,12 @@ body {
     width: 530px;
     height: 530px;
     border: 1px solid #EB1A1A;
-    background: linear-gradient(45deg black #666666);
     border-radius: 20px;
+    box-shadow: 0 0 10vw 0vw rgb(235, 26, 26),
+    0 0 2vw 0.4vw rgb(235, 20, 20),
+    0 0 0.5vw 0.2vw rgb(235, 15, 15),
+    0 0 0.5vw 0.2vw rgb(235, 10, 10),
+    0 0 0.5vw 0.2vw rgb(235, 5, 5);
 }
 
 
@@ -197,8 +200,8 @@ footer {
 }
 
 .footer {
+    @include redStrokeRectangleBlackBackground;
     height: 150px;
-    border: 1px solid #EB1A1A;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -212,6 +215,18 @@ footer {
 
 #tel {
     width: 204px;
+}
+
+#github {
+    width: 75px;
+    height: 75px;
+    /* padding: 5px; */
+}
+
+.githubLogo {
+    margin-top: -5px;
+    width: 50px;
+    height: 50px;
 }
 
 #legalsMention {
@@ -262,7 +277,6 @@ a {
     }
 
     .redStrokeRectangle {
-        background: linear-gradient(black #680801);
         border-style: solid;
         border-color: #EB1A1A;
 
@@ -273,7 +287,13 @@ a {
         width: 20%;
 
         position: fixed;
-        display: none;
+
+        transform: translateX(-150px);
+        transition: transform 0.4s ease;
+    }
+
+    .redStrokeRectangle.active {
+        transform: translateX(0);
     }
 
     #navBar {
@@ -284,12 +304,7 @@ a {
         position: relative;
         bottom: 25px;
         align-items: center;
-        display: none;
     }
-
-    /* #navBar .active {
-        display: block;
-    } */
 
     .redRectangle {
         color: white;
@@ -301,7 +316,7 @@ a {
 
         padding-bottom: 16px;
         padding-top: 16px;
-        width: 120px;
+        width: 100px;
         height: fit-content;
 
         float: left;
@@ -331,6 +346,11 @@ a {
         width: 100%;
         height: fit-content;
         align-items: center;
+        margin-left: -2px;
+    }
+
+    #services {
+        text-align: center;
     }
 
     #customersFeedback {
@@ -341,7 +361,7 @@ a {
     .boxMenuBurger {
         display: flex;
         justify-content: flex-end;
-        margin-right: 10%;
+        margin-right: 5%;
     }
 
     .menuBurger {
@@ -358,10 +378,6 @@ a {
         background-color: #EB1A1A;
         border-radius: 5px;
     }
-
-    /* .menuBurger .open {
-        display: block;
-    } */
 
     .bar {
         background-color: white;
@@ -415,9 +431,11 @@ a {
         height: 100%;
         width: 20%;
 
-        filter: drop-shadow(10px 10px 10px #EB1A1A);
-
         position: fixed;
+    }
+
+    .logo {
+       left: 15px;
     }
 
     #navBar {
@@ -429,18 +447,88 @@ a {
         bottom: 25px;
     }
 
+    .redRectangle {
+        width: 50px;
+        text-align: center;
+        font-size: smaller;
+    }
+
+    #searchBar {
+        width: 50px;
+    }
+
+    #searchInput {
+        margin-left: -2px;
+        margin-top: -2px;
+    }
+
+    #searchInput::placeholder {
+        font-size: 12px;
+        height: fit-content;
+    }
+
+    #customersFeedback {
+        width: 50px;
+        font-size: 10px;
+    }
+
+    #cart {
+        width: 40px;
+    }
+
     .boxSection {
         display: flex;
         flex-direction: column;
+        align-items: center;
         /* margin-left: 15%; */
     }
 
-    #introduce {
-        margin-top: -150px;
+    .section {
+        height: 500px;
+        width: 200px;
     }
 
-    footer {
+    #photoCV {
+        margin: auto;
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+    }
 
+    .sectionText {
+        font-size: 1.3rem;
+    }
+
+    #introduce {
+        margin-top: 25px;
+        margin-left: 0px;
+    }
+
+    #price {
+        margin-bottom: -25px;
+        margin-top: 80px;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: auto;
+    }
+
+    .accountCircle {
+        height: 100px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    #feedBack1 {
+        margin-top: -20px;
+    }
+
+    #feedBack2 {
+        margin-top: -20px;
     }
 
     .footer {
@@ -452,4 +540,8 @@ a {
         border-top-right-radius: 20px;
         border-top-left-radius: 20px;
     }
+    #mail {
+        width: 275px;
+    }
+
 }

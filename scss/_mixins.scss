@@ -1,0 +1,17 @@
+@use "variables.scss" as *;
+
+@mixin flexCenter ($direction: row) {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin redStrokeRectangleBlackBackground () {
+    background-color: $mainBlackColor;
+    border: 1px solid $mainRedColor;
+}
+
+@mixin redRectangleWhiteTextJerseyFont () {
+    background-color: $mainRedColor;
+    color: $textPureWhiteColor;
+    font-family: $fontJersey10;
+}

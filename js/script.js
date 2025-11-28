@@ -1,12 +1,17 @@
 // alert("Coucou");
 
 const menuBurger = document.getElementById("menuBurgerToggle");
-const navBarOverlay = document.getElementById("navBar");
+const redStroke = document.querySelector(".redStrokeRectangle");
+const navBar = document.getElementById("navBar");
 
-menuBurger.addEventListener("click", () => {
+function openMenuMobile() {
+    if (!menuBurger || !redStroke || !navBar) return;
     if (menuBurger.checked) {
-        navBarOverlay.style.display = "flex";
+        redStroke.classList.add("active");
     } else {
-        navBarOverlay.style.display = "none";
+        redStroke.classList.remove("active");
     }
-});
+}
+
+openMenuMobile();
+menuBurger.addEventListener("change", openMenuMobile);
