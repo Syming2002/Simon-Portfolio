@@ -5,6 +5,12 @@
   box-sizing: border-box;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: black;
 }
@@ -70,20 +76,15 @@ body {
   justify-content: space-around;
 }
 
-#searchSymbol {
+.fa-magnifying-glass {
   color: white;
   margin-left: 20px;
-  margin-top: -5px;
-  width: 20%;
-  height: 150%;
-  background-color: white;
-  -webkit-mask: url(/media/search.svg) no-repeat center;
-  mask: url(/media/search.svg) no-repeat center;
-  -webkit-mask-size: contain;
-          mask-size: contain;
+  font-size: 20px;
 }
 
 #searchBar {
+  display: flex;
+  flex-direction: row;
   height: 50px;
   width: 200px;
 }
@@ -103,14 +104,14 @@ body {
 #searchInput::-moz-placeholder {
   color: white;
   font-family: "Jersey 10";
-  font-size: 30px;
+  font-size: 20px;
   padding-left: 10px;
 }
 
 #searchInput::placeholder {
   color: white;
   font-family: "Jersey 10";
-  font-size: 30px;
+  font-size: 20px;
   padding-left: 10px;
 }
 
@@ -146,26 +147,6 @@ body {
   zoom: 100%;
 }
 
-#introduce {
-  margin-left: 25%;
-  margin-top: -25%;
-  margin-bottom: 10%;
-}
-
-#price {
-  width: 100%;
-  margin: 35% 0;
-}
-
-#feedBackSection {
-  float: right;
-}
-
-.row {
-  display: flex;
-  justify-content: space-evenly;
-}
-
 .sectionText {
   color: #E6DAC6;
   font-family: "Jersey 10";
@@ -173,21 +154,15 @@ body {
   text-align: center;
 }
 
-.accountCircle {
-  width: 20%;
-  background-color: #E6DAC6;
-  -webkit-mask: url(/media/account_circle.svg) no-repeat center;
-  mask: url(/media/account_circle.svg) no-repeat center;
-  -webkit-mask-size: contain;
-          mask-size: contain;
+#introduce {
+  margin-left: 25%;
+  margin-top: -25%;
+  margin-bottom: -25%;
 }
 
-#feedBack1 {
-  margin-top: 30px;
-}
-
-#feedBack2 {
-  margin-top: 30px;
+#story {
+  margin-top: 35%;
+  padding: 15px;
 }
 
 footer {
@@ -216,13 +191,12 @@ footer {
 #github {
   width: 75px;
   height: 75px;
-  /* padding: 5px; */
+  display: flex;
+  align-items: center;
 }
 
-.githubLogo {
-  margin-top: -5px;
-  width: 50px;
-  height: 50px;
+.fa-github {
+  font-size: 35px;
 }
 
 #legalsMention {
@@ -271,7 +245,7 @@ a {
     height: 100%;
     width: 20%;
     position: fixed;
-    transform: translateX(-150px);
+    transform: translateX(-100%);
     transition: transform 0.4s ease;
   }
   .redStrokeRectangle.active {
@@ -305,21 +279,33 @@ a {
     height: 50px;
     width: 100px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
-  #searchSymbol {
-    display: none;
+  .fa-magnifying-glass {
+    color: white;
+    margin-left: 5px;
+    margin-top: 2px;
+    font-size: 15px;
   }
   #searchInput {
     background-color: rgba(235, 26, 26, 0);
     height: 30px;
     font-size: 20px;
     border: 0;
-    width: 100%;
+    width: 60%;
     height: -moz-fit-content;
     height: fit-content;
     align-items: center;
-    margin-left: -2px;
+    margin-left: -1px;
+  }
+  #searchInput::-moz-placeholder {
+    padding-left: 5px;
+  }
+  #searchInput::placeholder {
+    padding-left: 5px;
+  }
+  #story {
+    text-align: center;
   }
   #services {
     text-align: center;
@@ -364,6 +350,20 @@ a {
   #introduce {
     margin-top: -150px;
   }
+  #story {
+    margin-top: 35%;
+    padding: 15px;
+  }
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+  .fa-user {
+    color: #E6DAC6;
+    font-size: 50px;
+  }
   footer {
     width: 100vw;
   }
@@ -407,20 +407,25 @@ a {
   }
   #searchBar {
     width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .fa-magnifying-glass {
+    color: white;
+    margin-left: 0px;
+    margin-top: -5px;
+    font-size: 15px;
   }
   #searchInput {
-    margin-left: -2px;
-    margin-top: -2px;
+    height: 80%;
+    width: 70%;
   }
   #searchInput::-moz-placeholder {
     font-size: 12px;
-    height: -moz-fit-content;
-    height: fit-content;
   }
   #searchInput::placeholder {
     font-size: 12px;
-    height: -moz-fit-content;
-    height: fit-content;
   }
   #customersFeedback {
     width: 50px;
@@ -452,9 +457,8 @@ a {
     margin-top: 25px;
     margin-left: 0px;
   }
-  #price {
-    margin-bottom: -25px;
-    margin-top: 80px;
+  #story {
+    margin-top: 35%;
   }
   .row {
     display: flex;
@@ -462,11 +466,10 @@ a {
     height: auto;
     width: auto;
   }
-  .accountCircle {
-    height: 100px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
+  .fa-user {
+    color: #E6DAC6;
+    font-size: 50px;
+    margin-top: 25px;
   }
   #feedBack1 {
     margin-top: -20px;
@@ -486,4 +489,4 @@ a {
   #mail {
     width: 275px;
   }
-}/*# sourceMappingURL=background_style.css.map */
+}

@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/story_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <script src="./js/script.js" defer></script>
     <title>My Background</title>
-    <link rel="stylesheet" href="./css/background_style.css">
 </head>
 <body>
     <header>
@@ -23,8 +25,8 @@
                 </a>
                 <div id="navBar">
                     <div class="redRectangle" id="searchBar">
-                        <div id="searchSymbol"></div>                        
-                        <input id="searchInput" type="text" placeholder="Search...">
+                        <i class="fa-solid fa-magnifying-glass"></i>                      
+                        <input id="searchInput" type="text" placeholder="Search">
                     </div>
                     <div class="redRectangle">
                         <a href="#introduce">More about me</a>
@@ -33,7 +35,7 @@
                         <a href="#price">All my services</a>
                     </div>
                     <div class="redRectangle">
-                        <a href="footer" id="contactMe">Contact me</a>
+                        <a href="#footer" id="contactMe">Contact me</a>
                     </div>
                     <div class="redRectangle" id="customersFeedback">
                         <a href="#feedBackSection">Customers Feedback</a>
@@ -69,5 +71,25 @@
             </p>
         </div>
     </section>
+    <footer>
+        <div class="footer">
+            <div class="redRectangle" id="mail">
+                <a href="mailto:simon.bruneau@institutsolacroup.com" class="mail">
+                    simon.bruneau@institutsolacroup.com
+                </a>
+            </div>
+            <div class="redRectangle" id="tel">
+                <a href="tel:0783210422">+33 07 83 21 04 22</a>
+            </div>
+            <div class="redRectangle" id="legalsMention">
+                Legals Mentions
+            </div>
+            <div class="redRectangle" id="github">
+                <a href="https://github.com/Syming2002" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
