@@ -36,7 +36,7 @@ body {
 }
 
 .circleLogo {
-    background-color: $mainRedColor;
+    background-color: $mainDarkBlueColor;
     width: 30px;
     height: 15px;
     border-top-left-radius: 200px;
@@ -60,7 +60,7 @@ body {
 }
 
 .redRectangle {
-    @include redRectangleWhiteTextJerseyFont;
+    @include darkBlueRectangleWhiteTextJerseyFont;
     font-size: 20px;
 
     border-radius: 20px;

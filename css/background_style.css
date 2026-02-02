@@ -14,8 +14,7 @@ body {
 }
 
 .redStrokeRectangle {
-  background-color: black;
-  border: 1px solid rgb(235, 26, 26);
+  background-color: #0F172A;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   height: 150px;
@@ -31,7 +30,7 @@ body {
 }
 
 .circleLogo {
-  background-color: rgb(235, 26, 26);
+  background-color: #0F172A;
   width: 30px;
   height: 15px;
   border-top-left-radius: 200px;
@@ -55,7 +54,7 @@ body {
 }
 
 .redRectangle {
-  background-color: rgb(235, 26, 26);
+  background-color: #0F172A;
   color: white;
   font-family: "Jersey 10";
   font-size: 20px;
@@ -63,7 +62,6 @@ body {
   padding-bottom: 16px;
   padding-top: 16px;
   width: 140px;
-  height: -moz-fit-content;
   height: fit-content;
   float: left;
   display: flex;
@@ -79,8 +77,7 @@ body {
   background-color: white;
   -webkit-mask: url(/media/search.svg) no-repeat center;
   mask: url(/media/search.svg) no-repeat center;
-  -webkit-mask-size: contain;
-          mask-size: contain;
+  mask-size: contain;
 }
 
 #searchBar {
@@ -96,15 +93,7 @@ body {
   font-size: 20px;
   border: 0;
   width: 70%;
-  height: -moz-fit-content;
   height: fit-content;
-}
-
-#searchInput::-moz-placeholder {
-  color: white;
-  font-family: "Jersey 10";
-  font-size: 30px;
-  padding-left: 10px;
 }
 
 #searchInput::placeholder {
@@ -141,8 +130,7 @@ body {
   background: url("/media/photo_bord_de_mer_cv.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   zoom: 100%;
 }
 
@@ -178,8 +166,7 @@ body {
   background-color: #E6DAC6;
   -webkit-mask: url(/media/account_circle.svg) no-repeat center;
   mask: url(/media/account_circle.svg) no-repeat center;
-  -webkit-mask-size: contain;
-          mask-size: contain;
+  mask-size: contain;
 }
 
 #feedBack1 {
@@ -195,8 +182,7 @@ footer {
 }
 
 .footer {
-  background-color: black;
-  border: 1px solid rgb(235, 26, 26);
+  background-color: #0F172A;
   height: 150px;
   display: flex;
   justify-content: space-evenly;
@@ -295,7 +281,6 @@ a {
     padding-bottom: 16px;
     padding-top: 16px;
     width: 100px;
-    height: -moz-fit-content;
     height: fit-content;
     float: left;
     display: flex;
@@ -316,7 +301,6 @@ a {
     font-size: 20px;
     border: 0;
     width: 100%;
-    height: -moz-fit-content;
     height: fit-content;
     align-items: center;
     margin-left: -2px;
@@ -412,14 +396,8 @@ a {
     margin-left: -2px;
     margin-top: -2px;
   }
-  #searchInput::-moz-placeholder {
-    font-size: 12px;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
   #searchInput::placeholder {
     font-size: 12px;
-    height: -moz-fit-content;
     height: fit-content;
   }
   #customersFeedback {
@@ -486,4 +464,6 @@ a {
   #mail {
     width: 275px;
   }
-}/*# sourceMappingURL=background_style.css.map */
+}
+
+/*# sourceMappingURL=background_style.css.map */

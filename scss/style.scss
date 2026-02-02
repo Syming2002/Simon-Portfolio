@@ -12,7 +12,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: $mainBlackColor;
 }
 
 #menuBurgerToggle {
@@ -38,7 +38,7 @@ body {
 }
 
 .circleLogo {
-    background-color: $mainRedColor;
+    background-color: $mainDarkBlueColor;
     width: 30px;
     height: 15px;
     border-top-left-radius: 200px;
@@ -62,7 +62,7 @@ body {
 }
 
 .redRectangle {
-    @include redRectangleWhiteTextJerseyFont;
+    @include darkBlueRectangleWhiteTextJerseyFont;
     font-size: 20px;
 
     border-radius: 20px;
@@ -125,6 +125,7 @@ body {
 }
 
 .section {
+    @include sectionGrayMixin;
     width: 530px;
     height: 530px;
     border: 1px solid #EB1A1A;
@@ -310,7 +311,7 @@ a {
         font-family: "Jersey 10";
         font-size: 20px;
 
-        background-color: #EB1A1A;
+        background-color: $electricBlueButtonColor;
         border-radius: 20px;
 
         padding-bottom: 16px;
@@ -374,7 +375,7 @@ a {
         width: 40px;
         height: 40px;
         margin-top: 25px;
-        background-color: #EB1A1A;
+        background-color: $electricBlueButtonColor;
         border-radius: 5px;
     }
 

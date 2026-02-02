@@ -6,12 +6,15 @@
 }
 
 @mixin redStrokeRectangleBlackBackground () {
-    background-color: $mainBlackColor;
-    border: 1px solid $mainRedColor;
+    background-color: $mainDarkBlueColor;
 }
 
-@mixin redRectangleWhiteTextJerseyFont () {
-    background-color: $mainRedColor;
+@mixin darkBlueRectangleWhiteTextJerseyFont () {
+    background-color: $mainDarkBlueColor;
     color: $textPureWhiteColor;
     font-family: $fontJersey10;
+}
+
+@mixin sectionGrayMixin () {
+    background-color: $graySectionColor;
 }
