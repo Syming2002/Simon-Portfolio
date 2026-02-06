@@ -53,8 +53,8 @@ body {
   bottom: 25px;
 }
 
-.redRectangle {
-  background-color: #0F172A;
+.blueRectangle {
+  background-color: #3B82F6;
   color: white;
   font-family: "Jersey 10";
   font-size: 20px;
@@ -118,9 +118,7 @@ body {
   background-color: #334155;
   width: 530px;
   height: 530px;
-  border: 1px solid #EB1A1A;
   border-radius: 20px;
-  box-shadow: 0 0 10vw 0vw rgb(235, 26, 26), 0 0 2vw 0.4vw rgb(235, 20, 20), 0 0 0.5vw 0.2vw rgb(235, 15, 15), 0 0 0.5vw 0.2vw rgb(235, 10, 10), 0 0 0.5vw 0.2vw rgb(235, 5, 5);
 }
 
 #photoCV {
@@ -135,10 +133,16 @@ body {
   zoom: 100%;
 }
 
+#introduceDiv {
+  display: flex;
+  flex-direction: column;
+}
+
 #introduce {
   margin-left: 25%;
   margin-top: -25%;
   margin-bottom: -25%;
+  font-size: 42px;
 }
 
 #price {
@@ -179,10 +183,8 @@ body {
 }
 
 footer {
-  width: 100%;
-}
-
-.footer {
+  width: 100vw;
+  margin-top: 200px;
   background-color: #0F172A;
   height: 150px;
   display: flex;
@@ -273,7 +275,7 @@ a {
     bottom: 25px;
     align-items: center;
   }
-  .redRectangle {
+  .blueRectangle {
     color: white;
     font-family: "Jersey 10";
     font-size: 20px;
@@ -385,7 +387,7 @@ a {
     position: relative;
     bottom: 25px;
   }
-  .redRectangle {
+  .blueRectangle {
     width: 50px;
     text-align: center;
     font-size: smaller;

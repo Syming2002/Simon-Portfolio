@@ -18,7 +18,7 @@ body {
 }
 
 .redStrokeRectangle {
-    @include redStrokeRectangleBlackBackground;
+    @include darkblueColorBackground;
 
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -125,13 +125,12 @@ body {
 .section {
     width: 530px;
     height: 530px;
-    border: 1px solid #EB1A1A;
     border-radius: 20px;
-    box-shadow: 0 0 10vw 0vw rgb(235, 26, 26),
-    0 0 2vw 0.4vw rgb(235, 20, 20),
-    0 0 0.5vw 0.2vw rgb(235, 15, 15),
-    0 0 0.5vw 0.2vw rgb(235, 10, 10),
-    0 0 0.5vw 0.2vw rgb(235, 5, 5);
+}
+
+#sectionIntroduce {
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -197,7 +196,7 @@ footer {
 }
 
 .footer {
-    @include redStrokeRectangleBlackBackground;
+    @include darkblueColorBackground;
     height: 150px;
     display: flex;
     justify-content: space-evenly;

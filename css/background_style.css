@@ -54,7 +54,7 @@ body {
 }
 
 .redRectangle {
-  background-color: #0F172A;
+  background-color: #3B82F6;
   color: white;
   font-family: "Jersey 10";
   font-size: 20px;
@@ -117,9 +117,12 @@ body {
 .section {
   width: 530px;
   height: 530px;
-  border: 1px solid #EB1A1A;
   border-radius: 20px;
-  box-shadow: 0 0 10vw 0vw rgb(235, 26, 26), 0 0 2vw 0.4vw rgb(235, 20, 20), 0 0 0.5vw 0.2vw rgb(235, 15, 15), 0 0 0.5vw 0.2vw rgb(235, 10, 10), 0 0 0.5vw 0.2vw rgb(235, 5, 5);
+}
+
+#sectionIntroduce {
+  display: flex;
+  flex-direction: column;
 }
 
 #photoCV {

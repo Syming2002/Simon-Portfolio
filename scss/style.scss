@@ -20,7 +20,7 @@ body {
 }
 
 .redStrokeRectangle {
-    @include redStrokeRectangleBlackBackground;
+    @include darkblueColorBackground;
 
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -61,7 +61,7 @@ body {
     bottom: 25px;
 }
 
-.redRectangle {
+.blueRectangle {
     @include darkBlueRectangleWhiteTextJerseyFont;
     font-size: 20px;
 
@@ -128,13 +128,7 @@ body {
     @include sectionGrayMixin;
     width: 530px;
     height: 530px;
-    border: 1px solid #EB1A1A;
     border-radius: 20px;
-    box-shadow: 0 0 10vw 0vw rgb(235, 26, 26),
-    0 0 2vw 0.4vw rgb(235, 20, 20),
-    0 0 0.5vw 0.2vw rgb(235, 15, 15),
-    0 0 0.5vw 0.2vw rgb(235, 10, 10),
-    0 0 0.5vw 0.2vw rgb(235, 5, 5);
 }
 
 
@@ -150,10 +144,16 @@ body {
     zoom: 100%;
 }
 
+#introduceDiv {
+    display: flex;
+    flex-direction: column;
+}
+
 #introduce {
     margin-left: 25%;
     margin-top: -25%;
     margin-bottom: -25%;
+    font-size: 42px;
 }
 
 #price {
@@ -196,11 +196,9 @@ body {
 }
 
 footer {
-    width: 100%;
-}
-
-.footer {
-    @include redStrokeRectangleBlackBackground;
+    width: 100vw;
+    margin-top: 200px;
+    @include darkblueColorBackground;
     height: 150px;
     display: flex;
     justify-content: space-evenly;
@@ -306,7 +304,7 @@ a {
         align-items: center;
     }
 
-    .redRectangle {
+    .blueRectangle {
         color: white;
         font-family: "Jersey 10";
         font-size: 20px;
@@ -447,7 +445,7 @@ a {
         bottom: 25px;
     }
 
-    .redRectangle {
+    .blueRectangle {
         width: 50px;
         text-align: center;
         font-size: smaller;

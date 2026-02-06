@@ -5,12 +5,12 @@
     justify-content: center;
 }
 
-@mixin redStrokeRectangleBlackBackground () {
+@mixin darkblueColorBackground () {
     background-color: $mainDarkBlueColor;
 }
 
 @mixin darkBlueRectangleWhiteTextJerseyFont () {
-    background-color: $mainDarkBlueColor;
+    background-color: $electricBlueButtonColor;
     color: $textPureWhiteColor;
     font-family: $fontJersey10;
 }
