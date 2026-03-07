@@ -5,8 +5,17 @@
     padding: 0;
     box-sizing: border-box;
   }
+  html {
+    height: 100%;
+  }
   body {
     background-color: #020617;
+    height: 100%;
+  }
+  #wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
   }
   #menu-burger-toggle {
     display: none;
@@ -89,16 +98,21 @@
     padding-left: 10px;
     margin-top: 10px;
   }
+  main {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .box-section {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    margin: 50px 0;
   }
   #section-introduce {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
+    gap: 50px;
     align-items: center;
   }
   .section {
@@ -146,8 +160,6 @@
     margin-top: 30px;
   }
   footer {
-    width: 100vw;
-    margin-top: 200px;
     background-color: #0F172A;
     height: 150px;
     display: flex;
@@ -171,7 +183,7 @@
   }
 }
 /* Tablet Responsive */
-@media (min-width: 375px) and (max-width: 768px) {
+@media (min-width: 375px) and (max-width: 834px) {
   body {
     width: 100%;
   }
@@ -199,25 +211,27 @@
     transition: transform 0.2s ease-out 0s;
     transform: rotate(0deg) translate(0px, 0px);
   }
+  .logo {
+    display: flex;
+    justify-content: center;
+    margin-left: 25px;
+  }
   .dark-blue-rectangle {
     border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
     height: 100%;
     width: 20%;
     position: fixed;
-    transform: translateX(-150px);
+    transform: translateX(-100%);
     transition: transform 0.4s ease;
   }
   .dark-blue-rectangle.active {
     transform: translateX(0);
   }
-  #navBar {
+  #nav-bar {
     margin-top: 85px;
     display: flex;
     flex-direction: column;
     gap: 25px;
-    position: relative;
-    bottom: 25px;
     align-items: center;
   }
   .blue-rectangle {
@@ -265,10 +279,6 @@
     text-align: center;
   }
   #services {
-    text-align: center;
-  }
-  #customersFeedback {
-    width: 100px;
     text-align: center;
   }
   .box-menu-burger {
@@ -335,7 +345,6 @@
   .dark-blue-rectangle {
     background-color: #0F172A;
     border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
     height: 100%;
     width: 30%;
     z-index: 999;
@@ -343,8 +352,7 @@
   .logo {
     display: flex;
     justify-content: center;
-    position: relative;
-    bottom: 20px;
+    margin-left: 25px;
   }
   .circle-logo {
     background-color: #3B82F6;
@@ -359,12 +367,10 @@
   #circle-logo2 {
     transform: translate(-30px, 50px) rotateZ(135deg);
   }
-  #navBar {
+  #nav-bar {
     margin-top: 85px;
     display: flex;
     justify-content: space-evenly;
-    position: relative;
-    bottom: 25px;
   }
   .blue-rectangle {
     background-color: #3B82F6;
@@ -409,6 +415,13 @@
     justify-content: space-evenly;
     margin: 50px 0;
   }
+  #section-introduce {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 150px;
+  }
   .section {
     background-color: #334155;
     width: 300px;
@@ -432,7 +445,9 @@
   #project-section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 25px;
   }
   .section-text {
     color: white;
@@ -446,9 +461,6 @@
     margin-top: 50px;
   }
   #project1 {
-    margin-top: 30px;
-  }
-  #feedBack2 {
     margin-top: 30px;
   }
   footer {

@@ -1,289 +1,227 @@
 @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jersey+10&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Young+Serif&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@media (min-width: 768px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    height: 100%;
+  }
+  body {
+    background-color: #020617;
+    height: 100%;
+  }
+  #wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+  #menu-burger-toggle {
+    display: none;
+  }
+  .dark-blue-rectangle {
+    background-color: #0F172A;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    height: 150px;
+    width: 100%;
+    z-index: 999;
+  }
+  .logo {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 20px;
+  }
+  .circle-logo {
+    background-color: #3B82F6;
+    width: 30px;
+    height: 15px;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+  }
+  #circle-logo1 {
+    transform: translate(0px, 35px) rotateZ(-45deg);
+  }
+  #circle-logo2 {
+    transform: translate(-30px, 50px) rotateZ(135deg);
+  }
+  #nav-bar {
+    margin-top: 85px;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    bottom: 25px;
+  }
+  .fa-search {
+    margin-left: auto;
+  }
+  .blue-rectangle {
+    background-color: #3B82F6;
+    color: white;
+    font-family: "Jersey 10";
+    font-size: 20px;
+    border-radius: 20px;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    width: 140px;
+    height: -moz-fit-content;
+    height: fit-content;
+    float: left;
+    display: flex;
+    justify-content: space-around;
+  }
+  #search-input {
+    background-color: rgba(235, 26, 26, 0);
+    color: white;
+    font-family: "Jersey 10";
+    height: 30px;
+    font-size: 24px;
+    border: 0;
+    width: 70%;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-right: auto;
+  }
+  #search-input::-moz-placeholder {
+    color: white;
+    font-family: "Jersey 10";
+    font-size: 30px;
+    padding-left: 10px;
+    margin-top: 10px;
+  }
+  #search-input::placeholder {
+    color: white;
+    font-family: "Jersey 10";
+    font-size: 30px;
+    padding-left: 10px;
+    margin-top: 10px;
+  }
+  main {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .box-section {
+    display: flex;
+    flex-direction: row;
+  }
+  #section-introduce {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 50px;
+    align-items: center;
+  }
+  .section {
+    background-color: #334155;
+    width: 530px;
+    height: 530px;
+    border-radius: 20px;
+  }
+  #photo {
+    width: 124px;
+    height: 124px;
+    border-radius: 50%;
+    background: url("/media/photo_bord_de_mer_cv.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+    zoom: 100%;
+  }
+  #introduce {
+    font-size: 34px;
+  }
+  .section-text {
+    color: white;
+    font-family: "Jersey 10";
+    font-size: 24px;
+    text-align: center;
+    padding: 25px;
+  }
+  .fa-java {
+    font-size: 52px;
+    color: white;
+  }
+  footer {
+    background-color: #0F172A;
+    height: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+  }
+  #mail {
+    width: 352px;
+  }
+  #tel {
+    width: 204px;
+  }
+  #legals-mention {
+    width: 190px;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
 }
-
-body {
-  background-color: black;
-}
-
-#menuBurgerToggle {
-  display: none;
-}
-
-.darkBlueRectangle {
-  background-color: #0F172A;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  height: 150px;
-  width: 100%;
-  z-index: 999;
-}
-
-.logo {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  bottom: 20px;
-}
-
-.circleLogo {
-  background-color: #3B82F6;
-  width: 30px;
-  height: 15px;
-  border-top-left-radius: 200px;
-  border-top-right-radius: 200px;
-}
-
-#circleLogo1 {
-  transform: translate(0px, 35px) rotateZ(-45deg);
-}
-
-#circleLogo2 {
-  transform: translate(-30px, 50px) rotateZ(135deg);
-}
-
-#navBar {
-  margin-top: 85px;
-  display: flex;
-  justify-content: space-evenly;
-  position: relative;
-  bottom: 25px;
-}
-
-.blueRectangle {
-  background-color: #3B82F6;
-  color: white;
-  font-family: "Jersey 10";
-  font-size: 20px;
-  border-radius: 20px;
-  padding-bottom: 16px;
-  padding-top: 16px;
-  width: 140px;
-  height: -moz-fit-content;
-  height: fit-content;
-  float: left;
-  display: flex;
-  justify-content: space-around;
-}
-
-#searchSymbol {
-  color: white;
-  margin-left: 20px;
-  margin-top: -5px;
-  width: 20%;
-  height: 150%;
-  background-color: white;
-  -webkit-mask: url(/media/search.svg) no-repeat center;
-  mask: url(/media/search.svg) no-repeat center;
-  -webkit-mask-size: contain;
-          mask-size: contain;
-}
-
-#searchBar {
-  height: 50px;
-  width: 200px;
-}
-
-#searchInput {
-  background-color: rgba(235, 26, 26, 0);
-  color: white;
-  font-family: "Jersey 10";
-  height: 30px;
-  font-size: 20px;
-  border: 0;
-  width: 70%;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
-#searchInput::-moz-placeholder {
-  color: white;
-  font-family: "Jersey 10";
-  font-size: 30px;
-  padding-left: 10px;
-}
-
-#searchInput::placeholder {
-  color: white;
-  font-family: "Jersey 10";
-  font-size: 30px;
-  padding-left: 10px;
-}
-
-#customersFeedback {
-  width: 205px;
-}
-
-.boxSection {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin: 50px 0;
-}
-
-.section {
-  width: 530px;
-  height: 530px;
-  border-radius: 20px;
-  background-color: #334155;
-}
-
-#sectionIntroduce {
-  display: flex;
-  flex-direction: column;
-}
-
-#photoCV {
-  width: 124px;
-  height: 124px;
-  border-radius: 50%;
-  margin: 20px;
-  background: url("/media/photo_bord_de_mer_cv.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  -o-object-fit: cover;
-     object-fit: cover;
-  zoom: 100%;
-}
-
-#introduce {
-  margin-left: 25%;
-  margin-top: -25%;
-  margin-bottom: 10%;
-}
-
-#price {
-  width: 100%;
-  margin: 35% 0;
-}
-
-#feedBackSection {
-  float: right;
-}
-
-.row {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.sectionText {
-  color: #E6DAC6;
-  font-family: "Jersey 10";
-  font-size: 35px;
-  text-align: center;
-}
-
-.accountCircle {
-  width: 20%;
-  background-color: #E6DAC6;
-  -webkit-mask: url(/media/account_circle.svg) no-repeat center;
-  mask: url(/media/account_circle.svg) no-repeat center;
-  -webkit-mask-size: contain;
-          mask-size: contain;
-}
-
-#feedBack1 {
-  margin-top: 30px;
-}
-
-#feedBack2 {
-  margin-top: 30px;
-}
-
-footer {
-  background-color: #0F172A;
-  height: 150px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
-  width: 100%;
-}
-
-#mail {
-  width: 352px;
-}
-
-#tel {
-  width: 204px;
-}
-
-#github {
-  width: 75px;
-  height: 75px;
-  /* padding: 5px; */
-}
-
-.githubLogo {
-  margin-top: -5px;
-  width: 50px;
-  height: 50px;
-}
-
-#legalsMention {
-  width: 190px;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-}
-
 /* Tablet Responsive */
-@media (max-width: 768px) {
+@media (min-width: 375px) and (max-width: 834px) {
   body {
     width: 100%;
   }
-  #menuBurgerToggle:checked ~ .groupBar > .boxMenuBurger > .menuBurger span:nth-child(1) {
+  #menu-burger-toggle:checked ~ .group-bar > .box-menu-burger > .menu-burger span:nth-child(1) {
     transition: transform 0.2s ease-out 0s;
     transform: rotate(45deg) translate(5px, 5px);
   }
-  #menuBurgerToggle:checked ~ .groupBar > .boxMenuBurger > .menuBurger span:nth-child(2) {
+  #menu-burger-toggle:checked ~ .group-bar > .box-menu-burger > .menu-burger span:nth-child(2) {
     transition: opacity 0.2s ease-out 0s;
     opacity: 0;
   }
-  #menuBurgerToggle:checked ~ .groupBar > .boxMenuBurger > .menuBurger span:nth-child(3) {
+  #menu-burger-toggle:checked ~ .group-bar > .box-menu-burger > .menu-burger span:nth-child(3) {
     transition: transform 0.2s ease-out 0s;
     transform: rotate(-45deg) translate(5px, -5px);
   }
-  #menuBurgerToggle:not(checked) ~ .groupBar > .boxMenuBurger > .menuBurger span:nth-child(1) {
+  #menu-burger-toggle:not(checked) ~ .group-bar > .box-menu-burger > .menu-burger span:nth-child(1) {
     transition: transform 0.2s ease-out 0s;
     transform: rotate(0deg) translate(0px, 0px);
   }
-  #menuBurgerToggle:not(checked) ~ .groupBar > .boxMenuBurger > .menuBurger span:nth-child(2) {
+  #menu-burger-toggle:not(checked) ~ .group-bar > .box-menu-burger > .menu-burger span:nth-child(2) {
     transition: opacity 0.2s ease-out 0s;
     opacity: 1;
   }
-  #menuBurgerToggle:not(checked) ~ .groupBar > .boxMenuBurger > .menuBurger span:nth-child(3) {
+  #menu-burger-toggle:not(checked) ~ .group-bar > .box-menu-burger > .menu-burger span:nth-child(3) {
     transition: transform 0.2s ease-out 0s;
     transform: rotate(0deg) translate(0px, 0px);
   }
-  .darkBlueRectangle {
+  .logo {
+    display: flex;
+    justify-content: center;
+    margin-left: 25px;
+  }
+  .dark-blue-rectangle {
     border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
     height: 100%;
     width: 20%;
     position: fixed;
-    transform: translateX(-150px);
+    transform: translateX(-100%);
     transition: transform 0.4s ease;
   }
-  .darkBlueRectangle.active {
+  .dark-blue-rectangle.active {
     transform: translateX(0);
   }
-  #navBar {
+  #nav-bar {
     margin-top: 85px;
     display: flex;
     flex-direction: column;
     gap: 25px;
-    position: relative;
-    bottom: 25px;
     align-items: center;
   }
-  .blueRectangle {
+  .blue-rectangle {
     color: white;
     font-family: "Jersey 10";
     font-size: 20px;
@@ -297,14 +235,18 @@ a {
     float: left;
     display: flex;
     justify-content: space-around;
+    text-align: center;
   }
-  #searchBar {
+  #search-bar {
     height: 50px;
     width: 100px;
     display: flex;
     flex-direction: column;
   }
-  #searchInput {
+  .fa-search {
+    font-size: 0px;
+  }
+  #search-input {
     background-color: rgba(235, 26, 26, 0);
     height: 30px;
     font-size: 20px;
@@ -315,19 +257,23 @@ a {
     align-items: center;
     margin-left: -2px;
   }
+  #search-input::-moz-placeholder {
+    font-size: 20px;
+    text-align: center;
+  }
+  #search-input::placeholder {
+    font-size: 20px;
+    text-align: center;
+  }
   #services {
     text-align: center;
   }
-  #customersFeedback {
-    width: 100px;
-    text-align: center;
-  }
-  .boxMenuBurger {
+  .box-menu-burger {
     display: flex;
     justify-content: flex-end;
     margin-right: 5%;
   }
-  .menuBurger {
+  .menu-burger {
     height: 100%;
     display: flex;
     position: absolute;
@@ -346,7 +292,7 @@ a {
     width: 25px;
     height: 2px;
   }
-  .boxSection {
+  .box-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -360,124 +306,162 @@ a {
   }
   footer {
     width: 100vw;
-  }
-  .footer {
-    height: 300px;
-    border: 1px solid #EB1A1A;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
+    gap: 50px;
+    padding: 25px;
   }
 }
 /* Mobile Responsive */
-@media (max-width: 375px) {
-  .redStrokeRectangle {
-    background: linear-gradient(black #680801);
-    border-style: solid;
-    border-color: #EB1A1A;
-    border-top-right-radius: 20px;
+@media (max-width: 425px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #020617;
+  }
+  #menu-burger-toggle {
+    display: none;
+  }
+  .dark-blue-rectangle {
+    background-color: #0F172A;
     border-bottom-right-radius: 20px;
     height: 100%;
-    width: 20%;
-    position: fixed;
+    width: 30%;
+    z-index: 999;
   }
   .logo {
-    left: 15px;
+    display: flex;
+    justify-content: center;
+    margin-left: 25px;
   }
-  #navBar {
+  .circle-logo {
+    background-color: #3B82F6;
+    width: 30px;
+    height: 15px;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+  }
+  #circle-logo1 {
+    transform: translate(0px, 35px) rotateZ(-45deg);
+  }
+  #circle-logo2 {
+    transform: translate(-30px, 50px) rotateZ(135deg);
+  }
+  #nav-bar {
     margin-top: 85px;
     display: flex;
-    flex-direction: column;
-    gap: 25px;
-    position: relative;
-    bottom: 25px;
+    justify-content: space-evenly;
   }
-  .redRectangle {
-    width: 50px;
-    text-align: center;
-    font-size: smaller;
+  .blue-rectangle {
+    background-color: #3B82F6;
+    color: white;
+    font-family: "Jersey 10";
+    font-size: 20px;
+    border-radius: 20px;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    width: 100px;
+    height: -moz-fit-content;
+    height: fit-content;
+    float: left;
+    display: flex;
+    justify-content: space-around;
   }
-  #searchBar {
-    width: 50px;
+  #search-bar {
+    height: 50px;
+    width: 100px;
   }
-  #searchInput {
-    margin-left: -2px;
-    margin-top: -2px;
-  }
-  #searchInput::-moz-placeholder {
-    font-size: 12px;
+  #search-input {
+    color: white;
+    font-family: "Jersey 10";
+    height: 30px;
+    font-size: 20px;
     height: -moz-fit-content;
     height: fit-content;
   }
-  #searchInput::placeholder {
-    font-size: 12px;
-    height: -moz-fit-content;
-    height: fit-content;
+  #search-input::-moz-placeholder {
+    color: white;
+    font-family: "Jersey 10";
+    font-size: 20px;
   }
-  #customersFeedback {
-    width: 50px;
-    font-size: 10px;
+  #search-input::placeholder {
+    color: white;
+    font-family: "Jersey 10";
+    font-size: 20px;
   }
-  #cart {
-    width: 40px;
-  }
-  .boxSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* margin-left: 15%; */
-  }
-  .section {
-    height: 500px;
-    width: 200px;
-  }
-  #photoCV {
-    margin: auto;
-    margin-top: 25px;
-    display: flex;
-    justify-content: center;
-  }
-  .sectionText {
-    font-size: 1.3rem;
-  }
-  #introduce {
-    margin-top: 25px;
-    margin-left: 0px;
-  }
-  #price {
-    margin-bottom: -25px;
-    margin-top: 80px;
-  }
-  .row {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    width: auto;
-  }
-  .accountCircle {
-    height: 100px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-  }
-  #feedBack1 {
-    margin-top: -20px;
-  }
-  #feedBack2 {
-    margin-top: -20px;
-  }
-  .footer {
-    height: 300px;
-    border: 1px solid #EB1A1A;
+  .box-section {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    margin: 50px 0;
+  }
+  #section-introduce {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 150px;
+  }
+  .section {
+    background-color: #334155;
+    width: 300px;
+    height: 425px;
+    border-radius: 20px;
+  }
+  #photo {
+    width: 124px;
+    height: 124px;
+    border-radius: 50%;
+    background: url("/media/photo_bord_de_mer_cv.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+    zoom: 100%;
+  }
+  #introduce {
+    font-size: 25px;
+  }
+  .section-text {
+    color: white;
+    font-family: "Jersey 10";
+    font-size: 20px;
+    text-align: center;
+  }
+  .fa-java {
+    font-size: 46px;
+    color: white;
+    margin-top: 50px;
+  }
+  footer {
+    width: 100vw;
+    margin-top: 200px;
+    background-color: #0F172A;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
   }
   #mail {
-    width: 275px;
+    width: 352px;
+  }
+  #tel {
+    width: 204px;
+  }
+  #legals-mention {
+    width: 190px;
+  }
+  a {
+    text-decoration: none;
+    color: white;
   }
 }

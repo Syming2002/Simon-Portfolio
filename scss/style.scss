@@ -13,8 +13,19 @@
         box-sizing: border-box;
     }
 
+    html {
+        height: 100%;
+    }
+
     body {
         background-color: $mainBlackColor;
+        height: 100%;
+    }
+
+    #wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
     }
 
     #menu-burger-toggle {
@@ -103,18 +114,24 @@
         padding-left: 10px;
         margin-top: 10px;
     }
+
+    main {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     
     .box-section {
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
-        margin: 50px 0;
     }
 
     #section-introduce {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-around;
+        gap: 50px;
         align-items: center;
     }
 
@@ -171,8 +188,6 @@
     }
 
     footer {
-        width: 100vw;
-        margin-top: 200px;
         @include darkblueColorBackground;
         height: 150px;
         display: flex;
@@ -202,7 +217,7 @@
 
 /* Tablet Responsive */
 
-@media (min-width: 375px) and (max-width: 768px) {
+@media (min-width: 375px) and (max-width: 834px) {
 
     body {
         width: 100%;
@@ -238,14 +253,20 @@
         transform: rotate(0deg) translate(0px, 0px)
     }
 
+    .logo {
+        @include flexCenter();
+        margin-left: 25px;
+    }
+
+    // NAVBAR //
+
     .dark-blue-rectangle {
 
         border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
         height: 100%;
         width: 20%;
         position: fixed;
-        transform: translateX(-150px);
+        transform: translateX(-100%);
         transition: transform 0.4s ease;
     }
 
@@ -253,13 +274,11 @@
         transform: translateX(0);
     }
 
-    #navBar {
+    #nav-bar {
         margin-top: 85px;
         display: flex;
         flex-direction: column;
         gap: 25px;
-        position: relative;
-        bottom: 25px;
         align-items: center;
     }
 
@@ -316,10 +335,7 @@
         text-align: center;
     }
 
-    #customersFeedback {
-        width: 100px;
-        text-align: center;
-    }
+    // NAVBAR //
 
     .box-menu-burger {
         display: flex;
@@ -399,7 +415,6 @@
         @include darkblueColorBackground;
 
         border-bottom-right-radius: 20px;
-        border-bottom-left-radius: 20px;
 
         height: 100%;
         width: 30%;
@@ -409,8 +424,7 @@
 
     .logo {
         @include flexCenter;
-        position: relative;
-        bottom: 20px;
+        margin-left: 25px;
     }
 
     .circle-logo {
@@ -429,12 +443,10 @@
         transform: translate(-30px, 50px) rotateZ(135deg);
     }
 
-    #navBar {
+    #nav-bar {
         margin-top: 85px;
         display: flex;
         justify-content: space-evenly;
-        position: relative;
-        bottom: 25px;
     }
 
     .blue-rectangle {
@@ -480,6 +492,14 @@
         margin: 50px 0;
     }
 
+    #section-introduce {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 150px
+    }
+ 
     .section {
         @include sectionGrayMixin;
         width: 300px;
@@ -506,7 +526,9 @@
     #project-section {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 25px;
     }
 
     .section-text {
@@ -524,10 +546,6 @@
     }
 
     #project1 {
-        margin-top: 30px;
-    }
-
-    #feedBack2 {
         margin-top: 30px;
     }
 
