@@ -1,8 +1,8 @@
 // alert("Coucou");
 
-const menuBurger = document.getElementById("menuBurgerToggle");
-const redStroke = document.querySelector(".redStrokeRectangle");
-const navBar = document.getElementById("navBar");
+const menuBurger = document.getElementById("menu-burger-toggle");
+const redStroke = document.querySelector(".dark-blue-rectangle");
+const navBar = document.getElementById("nav-bar");
 
 function openMenuMobile() {
     if (!menuBurger || !redStroke || !navBar) return;

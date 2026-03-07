@@ -5,61 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Simon</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <script src="./js/script.js" defer></script>
 </head>
 <body>
 
     <header>
         <nav>
-            <input type="checkbox" name="menuBurgerToggle" id="menuBurgerToggle">
-            <div class="redStrokeRectangle">
+            <input type="checkbox" name="menu-burger-toggle" id="menu-burger-toggle">
+            <div class="dark-blue-rectangle">
                 <a href="./index.html">
                     <div class="logo">
-                        <div class="circleLogo" id="circleLogo1">
+                        <div class="circle-logo" id="circle-logo1">
                     
                         </div>
-                        <div class="circleLogo" id="circleLogo2">
+                        <div class="circle-logo" id="circle-logo2">
                     
                         </div>
                     </div>
                 </a>
-                <div id="navBar">
-                    <div class="blueRectangle" id="searchBar">
-                        <div id="searchSymbol"></div>                        
-                        <input id="searchInput" type="text" placeholder="Search...">
+                <div id="nav-bar">
+                    <div class="blue-rectangle" id="search-bar">
+                        <i class="fa-solid fa-search"></i>
+                        <input id="search-input" type="text" placeholder="Search...">
                     </div>
-                    <div class="blueRectangle">
+                    <div class="blue-rectangle" id="background">
                         <a href="./background.html">More about me</a>
                     </div>
-                    <div class="blueRectangle" id="services">
-                        <a href="#price">All my services</a>
+                    <div class="blue-rectangle" id="services">
+                        <a href="#services">All my services</a>
                     </div>
-                    <div class="blueRectangle">
-                        <a href="footer" id="contactMe">Contact me</a>
-                    </div>
-                    <div class="blueRectangle" id="customersFeedback">
-                        <a href="#feedBackSection">Customers Feedback</a>
-                    </div>
-                    <div class="blueRectangle" id="cart">
-                        View Cart
+                    <div class="blue-rectangle">
+                        <a href="#contact-me" id="contact-me">Contact me</a>
                     </div>
                 </div>
             </div>
-            <label for="menuBurgerToggle" class="groupBar">
-                <div class="boxMenuBurger">
-                    <div class="menuBurger">
-                        <span class="bar bar1"></span>
-                        <span class="bar bar2"></span>
-                        <span class="bar bar3"></span>
+            <label for="menu-burger-toggle" class="group-bar">
+                <div class="box-menu-burger">
+                    <div class="menu-burger">
+                        <span class="bar bar-1"></span>
+                        <span class="bar bar-2"></span>
+                        <span class="bar bar-3"></span>
                     </div>
                 </div>
             </label>
         </nav>
     </header>
-    <section class="boxSection">
-        <section id="sectionIntroduce" class="section">
-            <img src="./media/photo_bord_de_mer.jpg" alt="Photo Simon" id="photoCV">
-            <p class="sectionText" id="introduce">
+    <section class="box-section">
+        <section id="section-introduce" class="section">
+            <img src="./media/photo_bord_de_mer.jpg" alt="Photo Simon" id="photo">
+            <p class="section-text" id="introduce">
                 I’m a Junior Web <br>
                 Developer Programmer <br>
                 graduated from Institut <br>
@@ -68,34 +63,24 @@
                 can use my service for <br>
                 making a website</p>
         </section>
-        <section class="section" id="feedBackSection">
-                <div class="row">
-                    <div class="accountCircle"></div>
-                    <p class="sectionText" id="feedBack1">Simon was very helpful <br> for making my website, <br> the communication was <br> great. I recommend <br> this web developer</p>
-                </div>                
-                <div class="row">
-                    <div class="accountCircle"></div>               
-                    <p class="sectionText" id="feedBack2">Simon was very fast <br>
-                    for making my website <br> in emergency, the <br> operation was within <br> my budget. Great web <br> developer.</p>
-                </div>
+        <section class="section" id="project-section">
+            <i class="fa-brands fa-java"></i>
+            <p class="section-text" id="project-1">
+                I'm making a mod for a video game called Minecraft, this mod is written with the programming language Java. I've learned Java by myself to make my own mod creation. I've several project mod but here is the most advanced mod I've made
+            </p>
         </section>
     </section>
     <footer>
-        <div class="blueRectangle" id="mail">
+        <div class="blue-rectangle" id="mail">
             <a href="mailto:simon.bruneau@institutsolacroup.com" class="mail">
                 simon.bruneau@institutsolacroup.com
             </a>
         </div>
-        <div class="blueRectangle" id="tel">
+        <div class="blue-rectangle" id="tel">
             <a href="tel:0783210422">+33 07 83 21 04 22</a>
         </div>
-        <div class="blueRectangle" id="legalsMention">
+        <div class="blue-rectangle" id="legals-mention">
             Legals Mentions
-        </div>
-        <div class="blueRectangle" id="github">
-            <a href="https://github.com/Syming2002" target="_blank" rel="noopener noreferrer">
-                <img src="./media/github-mark-white.svg" alt="GitHub Logo" class="githubLogo">
-            </a>
         </div>
     </footer>
 </body>

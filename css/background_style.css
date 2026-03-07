@@ -13,7 +13,7 @@ body {
   display: none;
 }
 
-.redStrokeRectangle {
+.darkBlueRectangle {
   background-color: #0F172A;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -30,7 +30,7 @@ body {
 }
 
 .circleLogo {
-  background-color: #0F172A;
+  background-color: #3B82F6;
   width: 30px;
   height: 15px;
   border-top-left-radius: 200px;
@@ -53,7 +53,7 @@ body {
   bottom: 25px;
 }
 
-.redRectangle {
+.blueRectangle {
   background-color: #3B82F6;
   color: white;
   font-family: "Jersey 10";
@@ -62,6 +62,7 @@ body {
   padding-bottom: 16px;
   padding-top: 16px;
   width: 140px;
+  height: -moz-fit-content;
   height: fit-content;
   float: left;
   display: flex;
@@ -77,7 +78,8 @@ body {
   background-color: white;
   -webkit-mask: url(/media/search.svg) no-repeat center;
   mask: url(/media/search.svg) no-repeat center;
-  mask-size: contain;
+  -webkit-mask-size: contain;
+          mask-size: contain;
 }
 
 #searchBar {
@@ -93,7 +95,15 @@ body {
   font-size: 20px;
   border: 0;
   width: 70%;
+  height: -moz-fit-content;
   height: fit-content;
+}
+
+#searchInput::-moz-placeholder {
+  color: white;
+  font-family: "Jersey 10";
+  font-size: 30px;
+  padding-left: 10px;
 }
 
 #searchInput::placeholder {
@@ -118,6 +128,7 @@ body {
   width: 530px;
   height: 530px;
   border-radius: 20px;
+  background-color: #334155;
 }
 
 #sectionIntroduce {
@@ -133,7 +144,8 @@ body {
   background: url("/media/photo_bord_de_mer_cv.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   zoom: 100%;
 }
 
@@ -169,7 +181,8 @@ body {
   background-color: #E6DAC6;
   -webkit-mask: url(/media/account_circle.svg) no-repeat center;
   mask: url(/media/account_circle.svg) no-repeat center;
-  mask-size: contain;
+  -webkit-mask-size: contain;
+          mask-size: contain;
 }
 
 #feedBack1 {
@@ -181,10 +194,6 @@ body {
 }
 
 footer {
-  width: 100%;
-}
-
-.footer {
   background-color: #0F172A;
   height: 150px;
   display: flex;
@@ -192,6 +201,7 @@ footer {
   align-items: center;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
+  width: 100%;
 }
 
 #mail {
@@ -252,9 +262,7 @@ a {
     transition: transform 0.2s ease-out 0s;
     transform: rotate(0deg) translate(0px, 0px);
   }
-  .redStrokeRectangle {
-    border-style: solid;
-    border-color: #EB1A1A;
+  .darkBlueRectangle {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     height: 100%;
@@ -263,7 +271,7 @@ a {
     transform: translateX(-150px);
     transition: transform 0.4s ease;
   }
-  .redStrokeRectangle.active {
+  .darkBlueRectangle.active {
     transform: translateX(0);
   }
   #navBar {
@@ -275,15 +283,16 @@ a {
     bottom: 25px;
     align-items: center;
   }
-  .redRectangle {
+  .blueRectangle {
     color: white;
     font-family: "Jersey 10";
     font-size: 20px;
-    background-color: #EB1A1A;
+    background-color: #3B82F6;
     border-radius: 20px;
     padding-bottom: 16px;
     padding-top: 16px;
     width: 100px;
+    height: -moz-fit-content;
     height: fit-content;
     float: left;
     display: flex;
@@ -295,15 +304,13 @@ a {
     display: flex;
     flex-direction: column;
   }
-  #searchSymbol {
-    display: none;
-  }
   #searchInput {
     background-color: rgba(235, 26, 26, 0);
     height: 30px;
     font-size: 20px;
     border: 0;
     width: 100%;
+    height: -moz-fit-content;
     height: fit-content;
     align-items: center;
     margin-left: -2px;
@@ -331,7 +338,7 @@ a {
     width: 40px;
     height: 40px;
     margin-top: 25px;
-    background-color: #EB1A1A;
+    background-color: #3B82F6;
     border-radius: 5px;
   }
   .bar {
@@ -399,8 +406,14 @@ a {
     margin-left: -2px;
     margin-top: -2px;
   }
+  #searchInput::-moz-placeholder {
+    font-size: 12px;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
   #searchInput::placeholder {
     font-size: 12px;
+    height: -moz-fit-content;
     height: fit-content;
   }
   #customersFeedback {
@@ -468,5 +481,3 @@ a {
     width: 275px;
   }
 }
-
-/*# sourceMappingURL=background_style.css.map */
