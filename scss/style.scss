@@ -1,5 +1,3 @@
-@use "content.scss" as *;
-@use "header.scss" as *;
 @use "mixins.scss" as *;
 @use "variables.scss" as *;
 
@@ -97,7 +95,7 @@
 
     #search-input {
         background-color: #eb1a1a00;
-        color: white;
+        color: $textPureWhiteColor;
         font-family: "Jersey 10";
         height: 30px;
         font-size: 24px;
@@ -108,7 +106,7 @@
     }
 
     #search-input::placeholder {
-        color: white;
+        color: $textPureWhiteColor;
         font-family: "Jersey 10";
         font-size: 30px;
         padding-left: 10px;
@@ -125,13 +123,13 @@
     .box-section {
         display: flex;
         flex-direction: row;
+        gap: 100px;
     }
 
     #section-introduce {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        gap: 50px;
         align-items: center;
     }
 
@@ -211,7 +209,7 @@
 
     a {
         text-decoration: none;
-        color: white;
+        color: $textPureWhiteColor;
     }
 }
 
@@ -261,7 +259,6 @@
     // NAVBAR //
 
     .dark-blue-rectangle {
-
         border-top-right-radius: 20px;
         height: 100%;
         width: 20%;
@@ -283,7 +280,7 @@
     }
 
     .blue-rectangle {
-        color: white;
+        color: $textPureWhiteColor;
         font-family: "Jersey 10";
         font-size: 20px;
 
@@ -359,7 +356,7 @@
     }
 
     .bar {
-        background-color: white;
+        background-color: $textPureWhiteColor;
         width: 25px;
         height: 2px;
     }
@@ -472,7 +469,7 @@
     }
 
     #search-input {
-        color: white;
+        color: $textPureWhiteColor;
         font-family: "Jersey 10";
         height: 30px;
         font-size: 20px;
@@ -480,7 +477,7 @@
     }
 
     #search-input::placeholder {
-        color: white;
+        color: $textPureWhiteColor;
         font-family: "Jersey 10";
         font-size: 20px;
     }

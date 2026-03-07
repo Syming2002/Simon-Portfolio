@@ -107,12 +107,12 @@
   .box-section {
     display: flex;
     flex-direction: row;
+    gap: 100px;
   }
   #section-introduce {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    gap: 50px;
     align-items: center;
   }
   .section {
